@@ -75,7 +75,6 @@ a.inner-page__media-link:active {
 }
 
 /*Новые стили*/
-
 .inner-page__about-links {
   gap: 15px;
   @media (min-width: 1170px) {
@@ -140,6 +139,38 @@ a.inner-page__media-link:active {
 
     & > label {
       padding: 15px;
+    }
+  }
+}
+
+/*Правки детальной страницы новости*/
+.news-detail-page__wrap {
+  grid-template-columns: 130px 1fr;
+}
+
+@media (min-width: 1170px) {
+  .news-detail-page__wrap {
+    grid-template-columns: 165px 1fr 265px;
+  }
+}
+.news-detail-page__slider-wrap {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.news-detail-page__description {
+  display: flex;
+  flex-direction: column;
+  & .owl-carousel {
+    width: 100%;
+
+
+    & img {
+      margin: 0;
+      padding: 0;
+      aspect-ratio: 3 /2;
+      object-position: center;
+      object-fit: cover;
     }
   }
 }
