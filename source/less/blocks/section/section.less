@@ -174,3 +174,50 @@ a.inner-page__media-link:active {
     }
   }
 }
+
+/*Правки детальной страницы коллективов*/
+
+.collective-page__wrap {
+  grid-template-columns: 130px auto;
+}
+
+@media (min-width: 1170px) {
+  .collective-page__wrap {
+    grid-template-columns: 165px 1fr 265px;
+  }
+}
+
+.slider_wrapper {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/*Правки детальной страницы услуги*/
+
+.service-page {
+  &__wrap {
+    grid-template-columns: 130px 1fr;
+
+    @media (min-width: 1170px) {
+      grid-template-columns: 165px 1fr 265px;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+
+    & .owl-carousel {
+      width: 100%;
+
+      & img {
+        margin: 0;
+        padding: 0;
+        aspect-ratio: 3 /2;
+        object-position: center;
+        object-fit: cover;
+      }
+    }
+  }
+}

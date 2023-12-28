@@ -1,0 +1,71 @@
+.main-footer {
+  & .info {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @media (min-width: 768px) {
+      grid-template-columns: 1fr 300px;
+      grid-template-areas: "about rate" "booking rate" "dev rate" ". rate";
+      align-items: start;
+      gap: 30px;
+    }
+
+    @media (min-width: 992px) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-areas:
+        "rate about booking dev";
+
+    }
+  }
+
+  & .info__wrap {
+    @media (min-width: 768px) {
+      width: 100%;
+      margin: 0;
+      &--about {
+        grid-area: about;
+      }
+
+      &--booking {
+        grid-area: booking;
+      }
+
+      &--dev {
+        grid-area: dev;
+      }
+    }
+  }
+
+  & .info__wrap--rate {
+    margin-bottom: 22px;
+    border: 1px solid #b3b3b3;
+    padding: 15px;
+
+    @media (min-width: 768px) {
+        grid-area: rate;
+    }
+
+    & h3,
+    & p {
+      text-align: center;
+    }
+  }
+}
+
+.page__section.events {
+  & .event__title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-clamp: 3;
+    box-orient: vertical;
+  }
+}
+
+.site-list__submenu {
+  z-index: 5;
+}
