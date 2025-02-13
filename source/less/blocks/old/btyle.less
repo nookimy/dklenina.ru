@@ -1,0 +1,195 @@
+.parallax-window {
+    padding-top: 33px;
+    padding-bottom: 33px;
+  }
+  .slider {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/main-header/moose.jpeg);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/main-header/moose.jpeg);
+  }
+  a.inner-page__media-link:active {
+    background-color: red;
+  }
+  .news-detail-page__description {
+    min-width: 100%;
+  }
+  .service-page__description {
+    min-width: 100%;
+  }
+  .collective-page__description {
+    min-width: 100%;
+  }
+  .collectives {
+    padding-top: 60px;
+    padding-bottom: 90px;
+    margin-bottom: 0;
+  }
+  .collectives_bg {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0.6)));
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6));
+  }
+  .calendar_today {
+    padding: 0;
+  }
+  .calendar .day.has-event:after {
+    background: #fc3f4d;
+    top: calc(50% + 0.8em);
+  }
+  .calendar .day.calendar_today {
+    background: #fc3f4d;
+  }
+  .affiche__link {
+    margin: 5px auto;
+  }
+  .inner-page__about-links > li > .inner-page__about-link {
+    min-width: 200px;
+  }
+  .afbf_feedback_poles .afbf_item_pole {
+    margin: 10px 0px 5px;
+  }
+  .afbf_feedback_poles .afbf_name {
+    color: #ffffff;
+    opacity: 0.5;
+  }
+  .collective--choreo::before {
+    background-image: url(../img/collective/dance.svg);
+  }
+  .tabs > label {
+    padding: 15px;
+  }
+  /*Новые стили*/
+  .inner-page__about-links {
+    gap: 15px;
+  }
+  @media (min-width: 1170px) {
+    .inner-page__about-links {
+      margin-top: 0;
+    }
+  }
+  .inner-page__about-links > li {
+    margin-right: 0;
+  }
+  .history-page__carousel {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  @media (min-width: 1170px) {
+    .history-page {
+      grid-template-rows: auto 80px auto;
+    }
+    .history-page__img {
+      grid-row-start: 1;
+      grid-row-end: 3;
+    }
+    .history-page__gallery {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      padding-right: 0;
+      margin-top: 0;
+    }
+    .history-page__gallery-wrap {
+      width: 600px;
+      margin: 0 auto;
+    }
+    .history-page__carousel {
+      max-width: unset;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0;
+    }
+    .history-page__carousel li {
+      width: 100%;
+    }
+    .history-page__carousel li img {
+      aspect-ratio: 1.5;
+      -o-object-fit: cover;
+         object-fit: cover;
+      -o-object-position: center;
+         object-position: center;
+    }
+  }
+  @media (min-width: 1170px) {
+    .tabs {
+      margin-top: 15px;
+    }
+    .tabs > label {
+      padding: 15px;
+    }
+  }
+  /*Правки детальной страницы новости*/
+  .news-detail-page__wrap {
+    grid-template-columns: 130px 1fr;
+  }
+  .news-detail-page__slider-wrap {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .news-detail-page__description .owl-carousel {
+    width: 100%;
+  }
+  .news-detail-page__description .owl-carousel img {
+    margin: 0;
+    padding: 0;
+    aspect-ratio: 1.5;
+    -o-object-position: center;
+       object-position: center;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  
+  .event-page__tag {
+      word-break: break-all;
+  }
+  .tabs-contacts .media__tabs {
+    margin-top: 0;
+    padding-right: 0;
+    padding-left: 0;
+    margin-bottom: 25px;
+  }
+  @media (min-width: 1170px) {
+    .tabs-contacts .media__tabs {
+      margin: -35px 30px 0 0;
+    }
+  }
+  @media (min-width: 1170px) {
+    .page__wrap-revers .page-section.about {
+      margin: 0;
+      margin-left: auto;
+      width: 625px;
+    }
+    .page__wrap-revers .page-section.about .about__title {
+      top: unset;
+      left: unset;
+      position: static;
+      margin-bottom: 13px;
+    }
+  }
+  @media (min-width: 1170px) {
+    .page__wrap-revers .services {
+      width: 485px;
+    }
+    .page__wrap-revers .services .services__list {
+      row-gap: 25px;
+    }
+    .page__wrap-revers .services .services__item {
+      margin-bottom: 0;
+    }
+    .page__wrap-revers .services .services__link {
+      width: 240px;
+    }
+  }
+
+  .tabs-contacts {
+    @media (min-width: 1170px) {
+      align-items: flex-start;
+
+      & .page__wrap-revers {
+        padding-bottom: 0;
+      }
+    }
+    
+  }

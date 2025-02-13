@@ -1,0 +1,18 @@
+.yoshkar-ola {
+    @media (min-width: 1170px) {
+        &__wrap {
+            position: relative;
+
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                width: 100vw;
+                height: calc (100%+20px);
+                transform: translateX(-50%);
+                background-color: rgba(255, 255, 255, 0.5);
+            }
+        }
+    }   
+    
+}
