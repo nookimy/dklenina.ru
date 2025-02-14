@@ -2338,21 +2338,41 @@ html {
     list-style: none;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto;
+    gap: 15px;
+
+    @media (min-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+    }
   }
   .services__item {
-    margin-bottom: 15px;
+    width: 100%;
+    height: 100%;
+
+    &--qr {
+      display: flex;
+        flex-direction: column;
+        align-items: center;
+      & h3 {
+        text-align: center;
+      }
+      @media (min-width: 768px) {
+        grid-column-start: -2;
+        grid-column-end: -1;
+        grid-row-start: 1;
+        grid-row-end: 4;
+      }
+    }
   }
+
   .services__item:hover .services__link {
     border-color: transparent;
   }
   .services__link,
   .services__text {
+    width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
     width: 138px;
@@ -2360,6 +2380,7 @@ html {
     border-color: #dadada;
     border-width: 1px;
     border-style: solid;
+    width: 100%;
   }
   .services__link {
     display: -webkit-box;
@@ -2411,11 +2432,7 @@ html {
     .services__item {
       margin-bottom: 25px;
     }
-    .services__link,
-    .services__text {
-      width: 265px;
-      height: 100px;
-    }
+
     .services__text {
       font-size: 18px;
       padding: 22px 31px 10px;
@@ -2792,6 +2809,7 @@ html {
   }
   .info__copyright,
   .info__address,
+  .info__survey,
   .info__booking,
   .info__booking-tel,
   .info__worktime,
@@ -2820,6 +2838,11 @@ html {
     line-height: 24px;
     margin-bottom: 22px;
     color: #b3b3b3;
+  }
+
+  .info__survey {
+    display: inline-block;
+    margin-bottom: 10px;
   }
   .info__booking {
     font-size: 14px;
@@ -2872,7 +2895,7 @@ html {
     margin-bottom: 14px;
   }
   .info__confidentiality {
-    display: block;
+    display: inline-block;
     line-height: 1.25;
     font-weight: 400;
     font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -2918,7 +2941,6 @@ html {
     .info__address {
       font-size: 16px;
       line-height: 24px;
-      margin-bottom: 0;
     }
     .info__booking {
       font-size: 14px;
@@ -5075,8 +5097,8 @@ html {
     .news-detail-page__news-list-wrap {
       grid-column-start: -2;
       grid-column-end: -1;
-      grid-row-start: 1;
-      grid-row-end: 4;
+      grid-row-start: 4;
+
     }
   }
   /* Базовый контейнер табов */
@@ -5927,8 +5949,8 @@ html {
   }
   @media (min-width: 768px) {
     .main-footer .info {
-      grid-template-columns: 1fr 300px;
-      grid-template-areas: "about rate" "booking rate" "dev rate" ". rate";
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "about booking" "dev stat" ;
       -webkit-box-align: start;
           -ms-flex-align: start;
               align-items: start;
@@ -5938,7 +5960,8 @@ html {
   @media (min-width: 992px) {
     .main-footer .info {
       grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-areas: "rate about booking dev";
+      grid-template-areas: "about booking dev stat";
+    
     }
   }
   @media (min-width: 768px) {
@@ -5955,21 +5978,29 @@ html {
     .main-footer .info__wrap--dev {
       grid-area: dev;
     }
-  }
-  .main-footer .info__wrap--rate {
-    margin-bottom: 22px;
-    border: 1px solid #b3b3b3;
-    padding: 15px;
-  }
-  @media (min-width: 768px) {
-    .main-footer .info__wrap--rate {
-      grid-area: rate;
+
+    .main-footer .info__wrap--stat {
+      grid-area: stat;
     }
   }
-  .main-footer .info__wrap--rate h3,
-  .main-footer .info__wrap--rate p {
-    text-align: center;
+
+  .main-footer .info__wrap--stat {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+
+    @media (min-width: 768px) {
+      align-items: flex-start;
+    }
+
+    @media (min-width: 992px) {
+
+      align-items: flex-end;
+      
+    }
   }
+
   .page__section.events .event__title {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -6050,6 +6081,7 @@ html {
   }
   /*# sourceMappingURL=style.css.map */
   
-  .event-page__tag {
+  .event-page__tag,
+  .news-detail-page__short-info {
       word-break: break-all;
   }
