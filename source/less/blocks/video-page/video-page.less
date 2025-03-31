@@ -1,0 +1,40 @@
+.video-page {
+    &__pagination {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        & .text {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px;
+
+            & a,
+            & b {
+                color: inherit;
+                text-decoration: none;
+                display: flex;
+                font-size: 18px;
+                min-height: 39px;
+                min-width: 43px;
+                border: 1px solid rgba(217, 217, 217, 1);
+                padding: 9px 16px;
+                align-items: center;
+                justify-content: center;
+                font-weight: 400;
+                transition: 0.2s;
+            }
+
+            & a:hover,
+            & a:focus {
+                border: 1px solid rgba(252, 63, 77, 1);
+            }
+
+            & b {
+                background-color: rgba(252, 63, 77, 1);
+                border: 1px solid rgba(252, 63, 77, 1);
+                color: white;
+            }
+        }
+    }
+}
