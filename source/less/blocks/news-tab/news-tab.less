@@ -1,9 +1,5 @@
-.tabs__content--news {
-    width: 100%;
-    
-    @media (min-width: 1170px) {
-        width: 555px;
-    }
+.news-detail-page__news-list-wrap,
+.tabs__content--news {    
 
     & .news {
         &__list {
@@ -52,5 +48,13 @@
             grid-area: time;
             align-self: end;
         }
+    }
+}
+
+.tabs__content--news {
+    width: 100%;
+    
+    @media (min-width: 1170px) {
+        width: 555px;
     }
 }
