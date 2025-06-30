@@ -1,0 +1,31 @@
+.pobeda {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+
+    @media (min-width: 1170px) {
+        position: relative;
+        width: 1140px;
+        margin: 0 auto;
+        padding: 28px 19px;
+
+        &__link {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transform: translateY(-64px);
+
+        }
+        
+    }
+
+    &__img {
+        width: 200px;
+
+        @media (min-width: 1170px) {
+            width: 150px;
+        }
+    }
+    
+}
