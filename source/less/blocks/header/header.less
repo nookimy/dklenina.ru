@@ -1,0 +1,366 @@
+.header {
+    position: relative;
+    z-index: 500;
+    background-color: #fc3f4d;
+
+    @media screen and (min-width: 1170px) {
+        background-color: rgba(252, 63, 77, 0.8);
+    }
+
+    
+    
+
+    &__wrap {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        background-color: #fc3f4d;
+        color: #fff;
+        width: 100%;
+        padding-right: 70px;
+        padding-left: 15px;
+        margin: 0 auto;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (min-width: 1024px) {
+            position: relative;
+            padding: 0 15px;
+            max-width: 1440px;
+            height: auto;
+            justify-content: flex-start;
+            background-color: transparent;
+        }
+
+        @media screen and (min-width: 1200px) {
+            padding: 0 180px 0 15px;
+        }
+
+        & > a.logo {
+            display: flex; 
+            margin-left: 55px;
+
+            @media screen and (min-width: 1024px) {
+                margin-left: 0;
+                display: none;
+            }
+        }
+    }
+
+    & .today {
+        display: none;
+
+        @media screen and (min-width: 1200px) {
+            display: flex;
+            box-shadow: 0px 0px 119px -15px rgba(0,0,0,0.30);
+        }
+    }
+
+    & a.logo {
+        border: 1px solid #000;               
+        width: 94px;
+        height: 53px;        
+    }
+
+    & button.burger--open,
+    & button.burger--close {
+        width: 40px;
+        height: 40px;
+        z-index: 500;
+
+        padding: 0;
+        border: none;
+        font: inherit;
+        color: inherit;
+        text-decoration: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        background-color: transparent;
+
+        & svg {
+            width: 30px;
+            height: 30px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            display: none;
+        }
+    }
+
+    & button.burger--open {
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        
+    }
+
+    & button.burger--close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+
+    & .nav {      
+        
+
+        @media screen and (max-width: 1023px) {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            background-color: #fc3f4d;
+            color: #fff;
+            z-index: 500;
+            max-height: 100vh;
+            overflow: auto;
+            max-height: 0;
+            opacity: 0;
+            visibility: hidden;
+            overflow: hidden;
+            transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s;
+        }
+
+        @media screen and (min-width: 1024px) {
+            width: 100%;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        
+
+        &.nav--active {
+            max-height: 100vh;
+            opacity: 1;
+            visibility: visible;
+            overflow: auto;
+        }
+
+        @media screen and (min-width: 1024px) {
+            position: static;
+            overflow: unset;
+        }
+        
+
+        &__wrap {            
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @media screen and (min-width: 1024px) {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+            
+            & > a.logo {
+                display: flex; 
+                margin: 8.5px 0;
+
+                @media screen and (min-width: 1024px) {
+
+                    margin: 0;
+                    order: 2;
+                }
+
+                @media screen and (min-width: 1170px) {
+                    display: none;
+                }
+
+                @media screen and (min-width: 1200px) {
+                    order: 1;
+                }
+            }
+        }
+
+        &__menu {
+            width: 100%;
+
+            @media screen and (min-width: 1024px) {
+                width: 70%;
+                flex-grow: 1;
+                margin: 0;
+                order: 3;
+            }
+
+            @media screen and (min-width: 1200px) {
+                order: 2;
+                width: 50%;
+            }
+        }
+    }
+
+    
+
+    & .menu,
+    & .submenu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+
+        & li > a {
+            display: flex;
+            justify-content: center;
+            color: inherit;
+            text-decoration: none;
+            font-size: 16px;
+
+            @media screen and (min-width: 1024px) {                
+                justify-content: flex-start;
+                padding: 15px;
+            }
+
+            @media screen and (min-width: 1440px) {
+                font-size: 18px;
+            }
+            
+        }
+    }
+
+    & .menu {        
+        padding: 0 15px;
+
+        @media screen and (min-width: 1024px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: 0;
+            gap: 30px;
+        }
+
+
+        & > li {
+            &:not(:last-child) {
+            border-bottom: 1px solid rgba(#fff, 0.1);
+
+                @media screen and (min-width: 1024px) {
+                    border-bottom: none;
+                }
+            }
+
+            @media screen and (min-width: 1024px) {
+                position: relative;
+
+            }
+
+            & > a {
+                padding: 15px 0;
+            }
+        }
+    }
+
+    & .submenu {
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+        overflow: hidden;
+        transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s;
+
+        @media screen and (min-width: 1024px) {
+            position: absolute;
+            left: -15px;
+            width: 255px;
+            background-color: #fff;
+            color: #000;
+            box-shadow: 0px 0px 119px -15px rgba(0,0,0,0.30);
+            
+
+        }
+
+        &.submenu--open {
+            max-height: 500px;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        & > li {            
+
+            & > a {
+                padding: 15px;
+
+                @media screen and (min-width: 1024px) {
+                    transition: 0.2s;
+
+                    &:hover {
+                        background-color: rgba(#b3b3b3, 0.1);
+                        color: #fc3f4d;
+                    }
+                }
+                
+
+                
+            }
+        }
+    }
+
+    & .menu__arrow {
+        margin-left: 5px;
+        font-size: 0.8em;
+        transition: transform 0.3s ease;
+    }
+
+    /* Поворот стрелки у активного пункта */
+    & .menu__item--open > a > .menu__arrow {
+        transform: rotate(180deg);
+    }
+
+    & .form__search {
+        max-width: unset;
+        padding: 0 15px;
+
+        @media screen and (min-width: 1024px) {
+            width: 100%;
+            flex-grow: 1;
+            margin: 0;
+            padding: 0;
+            order: 1;
+
+            & input[type=search] {
+                flex-grow: 1;
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            width: 300px;
+            order: 3;
+            flex-grow: 0;
+        }
+    }
+
+
+
+
+
+
+
+
+}
+
+.page--inner {
+    & .header {
+        @media screen and (min-width: 1170px) {
+            background-color: rgba(252, 63, 77, 1);
+        }
+    }
+    & .header__wrap {
+        @media screen and (min-width: 1200px) {
+            padding: 0 15px;
+        }
+    }
+    & .nav__wrap > .logo {
+        @media screen and (min-width: 1024px) {
+            display: flex !important;
+        }
+        
+    }
+    & .today {
+        display: none !important;
+    }
+}
