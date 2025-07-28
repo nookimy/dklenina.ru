@@ -213,3 +213,36 @@
       line-height: 1.2;
     }
   }
+
+
+
+
+
+.calendar .header {
+  background-color: transparent;
+    display: flex;
+    justify-content: space-between; /* Раздвигаем кнопки по краям */
+    align-items: center; /* Выравниваем по вертикали */
+    width: 100%; /* Убедитесь, что контейнер занимает всю ширину */
+    padding: 0 20px; /* Отступы, чтобы кнопки не прилипали к краям */
+    box-sizing: border-box; /* Чтобы padding не увеличивал ширину */
+}
+
+.calendar .btn-prev, 
+.calendar .btn-next {
+    color: #fc3f4d;
+    background-color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+
+.calendar table { width: 100%; border-collapse: collapse; }
+.calendar th, 
+.calendar td { padding: 10px 0; text-align: center; border: 1px solid #ddd; }
+.calendar .day { cursor: pointer; }
+.calendar .wrong-month { color: #ccc; }
+/* Подсветка дней, на которые есть события */
+.calendar .has-event { background-color: #fc3f4d; color: white; }
+/* Стили списка событий */
